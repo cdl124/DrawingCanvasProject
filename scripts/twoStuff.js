@@ -1,5 +1,5 @@
 // Make an instance of two and place it on the page.
-var elem = document.getElementById('canvas');
+var elem = document.getElementById('artboard');
 var params = { width: 285, height: 200 };
 var two = new Two(params).appendTo(elem);
 
@@ -21,7 +21,7 @@ rect.noStroke();
 two.update();
 
 //makes animated shapes
-var elem = document.getElementById('canvas');
+var elem = document.getElementById('artboard');
 var two = new Two({ width: 285, height: 200 }).appendTo(elem);
 
 var circle = two.makeCircle(-70, 0, 50);
