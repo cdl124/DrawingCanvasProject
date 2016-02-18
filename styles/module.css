@@ -1,0 +1,12 @@
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 12vw;
+  }
+}
+
+#artboard {
+  border: solid;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}

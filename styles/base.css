@@ -1,0 +1,37 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+div {
+  height: 100%; }
+
+body {
+  background-color: #FFEBCA; }
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+  letter-spacing: -0.05em;
+  font-size: 6em;
+  color: #1AB58A;
+  margin: auto;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: #FF2151; }
+
+nav {
+  margin: auto; }
+
+p, li, footer {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.backbody {
+  z-index: initial;
+  max-width: 95%; }
+
+.pagecontent {
+  width: 840px;
+  max-width: 100%; }
