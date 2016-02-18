@@ -22,6 +22,7 @@ function renderCircle() {
     console.log(x, y);
     console.log(two.scene);
 
+    two.remove();
     drawCircle(x, y);
   })
 }
