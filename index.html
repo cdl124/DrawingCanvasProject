@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vector Canvas</title>
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/modules.css">
+  </head>
+
+  <body>
+    <main>
+    <h1 id="mainTitle">Vector Canvas</h1>
+    <section id="canvas">
+      <button type="button" id="circleSelect" onclick="circleSelect()">circle</button>
+      <button type="button" id="lineSelect" onclick="lineSelect()">line</button>
+      <div id="artboard" onclick="createArt()">
+
+      </div>
+    </section>
+    </main>
+  </body>
+
+  <footer>
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!--vendor scripts for two.js api -->
+  <script src="scripts/vendor/underscore.js"></script>
+  <script src="scripts/vendor/backbone.js"></script>
+  <script src="scripts/vendor/events.js"></script>
+  <script src="scripts/vendor/two.js"></script>
+
+  <script src="scripts/select.js"></script>
+  <script src="scripts/draw.js"></script>
+  <!-- <script src="scripts/twoStuff.js"></script> -->
+</html>
