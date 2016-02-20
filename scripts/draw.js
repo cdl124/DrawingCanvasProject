@@ -19,10 +19,7 @@ function renderCircle() {
     var offset = $(this).offset();
     var x = (e.pageX - offset.left);
     var y = (e.pageY - offset.top);
-    console.log(x, y);
-    console.log(two.scene);
-
-    two.remove();
+    console.log('Circles begin drawn');
     drawCircle(x, y);
   })
 }
@@ -50,29 +47,35 @@ function renderLine() {
       y2 = (e.pageY - offset.top);
       drawLine(x, y, x2, y2);
     })
-    console.log(two.scene);
+    console.log('line being drawn');
 }
 
 //creates a two.rectangle object
 function drawRect(x, y, w, h) {
   var rect = two.makeRectangle(x, y, w, h);
 
-  rectangle.stroke = '#000000';
-  rectangle.fill = '#ffffff';
+  rect.stroke = '#000000';
+  rect.fill = '#ffffff';
   two.update();
 }
 
-function renderRect(){
-  $('artboard')
+function renderRect() {
+  var x; var y; var w; var h;
+  $('#artboard')
     .mousedown(function(e) {
       var offset = $(this).offset();
-      var x = (e.pageX - offset.left);
-      var y = (e.pageY - offset.left);
-      console.log(x, y);
+      x = (e.pageX - offset.left);
+      y = (e.pageY - offset.top);
+      console.log(x, y)
     })
     .mouseup(function(e) {
       var offset = $(this).offset();
-      var w = (e.pageX);
-      var h = (e.pageY);
+      w = Math.abs(x - (e.pageX - offset.left));
+      h = Math.abs(y - (e.pageY - offset.top));
+      x = (x + (e.pageX - offset.left)) / 2;
+      y = (y + (e.pageY - offset.top)) / 2;
+      console.log(w, h);
+      drawRect(x, y, w, h);
+      console.log(two.scene);
     })
 }
