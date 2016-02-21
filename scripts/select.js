@@ -14,9 +14,12 @@ function lineSelect() {
 }
 
 function createArt() {
+  console.log(isCircleSelected, isLineSelected);
   if (isLineSelected === true) {
+    console.log("render line");
     renderLine();
   } else if (isCircleSelected === true) {
+    console.log("render circle");
     renderCircle();
   }
 }
