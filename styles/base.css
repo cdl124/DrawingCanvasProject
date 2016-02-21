@@ -10,6 +10,9 @@ img {
 div {
   height: 100%; }
 
+canvas {
+  display: block; }
+
 body {
   background-color: #FFEBCA; }
 
