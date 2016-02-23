@@ -30,10 +30,23 @@
     <div class='container'>
       <div class='backbody'>
         <div class='pagecontent'>
-          <button type="button" id="circleSelect" onclick="circleSelect()"><img src="styles/assets/Circle_Circle.png"></button>
-          <button type="button" id="lineSelect" onclick="lineSelect()"><img src="styles/assets/Line_Line.png"></button>
-          <button type="buton" id="rectSelect" onclick="rectSelect()">rectangle</button>
-          <canvas id='artboard' onclick="renderRect()" width="500" height="500"></canvas>
+          <a href='#' id="circleSelect" onclick="circleSelect()">
+            <img src="styles/assets/Circle_Circle.png">
+          </a>
+          <a href='#' id="lineSelect" onclick="lineSelect()">
+            <img src="styles/assets/Line_Line.png">
+          </a>
+          <div id="colorSelector">
+            <button type="button" onclick="selectColor(0)"></button>
+            <button type="button" onclick="selectColor(1)"></button>
+            <button type="button" onclick="selectColor(2)"></button>
+            <button type="button" onclick="selectColor(3)"></button>
+            <button type="button" onclick="selectColor(4)"></button>
+            <button type="button" onclick="selectColor(5)"></button>
+            <button type="button" onclick="selectColor(6)"></button>
+            <button type="button" onclick="selectColor(7)"></button>
+          </div>
+          <canvas id='artboard' onclick="createArt()" width="500" height="500"></canvas>
         </div>
       </div>
     </div>
