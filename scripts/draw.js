@@ -1,10 +1,17 @@
 //creates our canvas where shapes can be made
 var stage = new createjs.Stage('artboard');
 
+//createjs.Ticker.addEventListener("tick", stage);
+//createjs.Ticker.addEventListener("tick", tick);
+var circle = new createjs.Shape();
+var line = new createjs.Shape();
+stage.addChild(circle);
+stage.addChild(line);
+
 function drawCircle(x, y) {
-  var circle = new createjs.Shape();
-  circle.graphics.beginFill('DeepSkyBlue').drawCircle(x, y, 50);
-  stage.addChild(circle);
+  //var circle = new createjs.Shape();
+  circle.graphics.beginFill(shapeColor).drawCircle(x, y, 50);
+  //stage.addChild(circle);
   stage.update();
 }
 
@@ -20,11 +27,11 @@ function renderCircle() {
 
 //creates a easel.js line object
 function drawLine(x, y, x2, y2) {
-  var line = new createjs.Shape();
-  line.graphics.beginStroke('#000000');
+  //var line = new createjs.Shape();
+  line.graphics.beginStroke(shapeColor);
   line.graphics.moveTo(x, y);
   line.graphics.lineTo(x2, y2);
-  stage.addChild(line);
+  //stage.addChild(line);
   stage.update();
 }
 
@@ -49,7 +56,7 @@ function renderLine() {
 //creates a easle rectangle object
 function drawRect(x, y, w, h) {
   var rect = new createjs.Shape();
-  rect.graphics.beginFill('red').drawRect(x, y, w, h);
+  rect.graphics.beginFill(shapeColor).drawRect(x, y, w, h);
   stage.addChild(rect);
   stage.update();
 }
