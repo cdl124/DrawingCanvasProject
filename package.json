@@ -1,0 +1,23 @@
+{
+  "name": "drawingcanvasproject",
+  "version": "1.0.0",
+  "description": "drawing canvas group project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobKnaack/DrawingCanvasProject.git"
+  },
+  "author": "cortney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobKnaack/DrawingCanvasProject/issues"
+  },
+  "homepage": "https://github.com/JacobKnaack/DrawingCanvasProject#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-request-proxy": "^1.1.0"
+  }
+}

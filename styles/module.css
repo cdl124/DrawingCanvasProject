@@ -1,12 +1,93 @@
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 740px) {
   h1 {
     font-size: 12vw;
   }
+
+  #toolbar img, #colorSelctor * {
+    display: inline;
+  }
+
+  #toolbar {
+    display: block;
+  }
+
+  #artboard {
+    margin-top: 0px;
+  }
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+#toolbar img, #colorSelector * {
+  display: block;
+  margin-bottom: 1em;
+}
+
+#toolbar img {
+  width: 3em;
+  height: 3em;
+}
+
+#colorSelector button {
+  height: 2em;
+  width: 2em;
 }
 
 #artboard {
-  border: solid;
-  height: 500px;
-  width: 500px;
-  margin: 0 auto;
+    border: 2px solid #555;
+    height: 500px;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: -21em;
+    position: relative;
+    display: block;
+    background-color: #fff;
 }
+
+#galleryPost {
+  float: right;
+  height: 2em;
+  margin-top: -10em;
+}
+
+#splashscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFEBCA;;
+}
+
+#splashscreen div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#splashscreen p {
+  text-align: center;
+  font-style: bold;
+  color: #FF2151;
+}
+
+.splashtext {
+  font-style: italic;
+  font-size: 2em;
+}
+
+/* Colors for the palette!
+Red: #FF0000;
+Orange: #FFA500;
+Yellow: #FFFF00;
+Green: #008000;
+Blue: #0000FF;
+Purple: #4B0082
+Pink: #EE82EE;
+White: #FFFFFF;
+*/

@@ -10,9 +10,6 @@ img {
 div {
   height: 100%; }
 
-canvas {
-  display: block; }
-
 body {
   background-color: #FFEBCA; }
 
@@ -37,7 +34,7 @@ p, li, footer {
 
 .backbody {
   z-index: initial;
-  max-width: 95%; }
+  max-width: 100%; }
 
 .pagecontent {
   width: 840px;

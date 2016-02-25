@@ -29,7 +29,7 @@
   <main>
     <div class='container'>
       <div class='backbody'>
-        <div class='pagecontent'>
+        <div id="toolbar">
           <a href='#' id="circleSelect" onclick="circleSelect()">
             <img src="styles/assets/Circle_Circle.png">
           </a>
@@ -37,8 +37,8 @@
             <img src="styles/assets/Line_Line.png">
           </a>
           <div id="colorSelector">
-            <button type="button" onclick="selectColor(0)"></button>
-            <button type="button" onclick="selectColor(1)"></button>
+            <button type="button" onclick="selectColor(0)" id="red"></button>
+            <button type="button" onclick="selectColor(1)" id="orange"></button>
             <button type="button" onclick="selectColor(2)"></button>
             <button type="button" onclick="selectColor(3)"></button>
             <button type="button" onclick="selectColor(4)"></button>
@@ -46,8 +46,9 @@
             <button type="button" onclick="selectColor(6)"></button>
             <button type="button" onclick="selectColor(7)"></button>
           </div>
-          <canvas id='artboard' onclick="createArt()" width="500" height="500"></canvas>
         </div>
+        <canvas id='artboard' onclick="createArt()" width="500" height="500"></canvas>
+        <button type="button" id="galleryPost">Save this to the gallery!</button>
       </div>
     </div>
   </main>
@@ -58,11 +59,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
 <!-- <script src="scripts/vendor/backbone.js"></script> -->
-<script src="scripts/vendor/events.js"></script>
+<!-- <script src="scripts/vendor/events.js"></script>
 <script src="scripts/vendor/two.js"></script>
 <script src="scripts/vendor/underscore.js"></script>
-
-<!-- <script src="scripts/twoStuff.js"></script> -->
+ -->
 <script src="scripts/select.js"></script>
 <script src="scripts/draw.js"></script>
+<script src="scripts/gallery.js"></script>
 </html>
