@@ -1,12 +1,10 @@
-// Bind a function to scale and rotate the group
-// to the animation loop.
-two.bind('update', function(frameCount) {
-  // This code is called everytime two.update() is called.
-  // Effectively 60 times per second.
-  if (group.scale > 0.9999) {
-    group.scale = group.rotation = 0;
-  }
-  var t = (1 - group.scale) * 0.125;
-  group.scale += t;
-  group.rotation += t * 4 * Math.PI;
-}).play();  // Finally, start the animation loop
+// createjs.Ticker.addEventListener("tick", tick);
+
+// function tick (event){
+//   console.log("tick!!");
+//   circle.x += 3;
+//   if (circle.x > stage.canvas.width) {
+//     circle.x = 0;
+//   }
+//   stage.update(event);
+// }
