@@ -8,33 +8,32 @@
   }
 
   #toolbar {
-    display: block;
+    display: inline;
   }
 
   #artboard {
     margin-top: 0px;
   }
 }
+/* end media query */
 
-#toolbar {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-}
-
-#toolbar img, #colorSelector * {
-  display: block;
-  margin-bottom: 1em;
+#toolbar, #colorSelector {
+  display: inline;
+  margin: 0 auto;
 }
 
 #toolbar img {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
 }
 
-#colorSelector button {
-  height: 2em;
-  width: 2em;
+#toolbar button {
+  border: none;
+  background-color: transparent;
+}
+
+#toolbar button, #toolbar img {
+  display: inline;
 }
 
 #artboard {
@@ -42,8 +41,8 @@
     height: 500px;
     width: 500px;
     max-width: 100%;
-    margin: 0 auto;
-    margin-top: -21em;
+    margin: auto;
+    margin-top: 1em;
     position: relative;
     display: block;
     background-color: #fff;
