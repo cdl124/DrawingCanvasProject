@@ -2,6 +2,7 @@
 var isCircleSelected;
 var isLineSelected;
 var isRectSelected;
+var isTriSelected;
 
 function circleSelect() {
   $('#artboard').unbind('mouseup');
@@ -14,6 +15,7 @@ function circleSelect() {
   isCircleSelected = true;
   isLineSelected = false;
   isRectSelected = false;
+  isTriSelected = false;
 }
 
 function lineSelect() {
@@ -27,7 +29,7 @@ function lineSelect() {
   isCircleSelected = false;
   isLineSelected = true;
   isRectSelected = false;
-
+  isTriSelected = false;
 }
 
 function rectSelect() {
@@ -41,40 +43,23 @@ function rectSelect() {
   isCircleSelected = false;
   isLineSelected = false;
   isRectSelected = true;
+  isTriSelected = false;
+}
+
+function TriSelect() {
+  $('#artboard').unbind('mouseup');
+  $('#artboard').unbind('mousedown');
+  $('#artboard').unbind('click');
+
+  triangle = new createjs.shape();
+  stage.addChild(triangle);
+
+  isCircleSelected = false;
+  isLineSelected = false;
+  isRectSelected = false;
+  isTriSelected = true;
 }
 //*******************************************
-
-//draw the selected shape********************
- function createArt() {
-  if (isLineSelected === true) {
-    var xStart, yStart, offset;
-    $('#artboard').mousedown(function(e) {
-      offset = $(this).offset();
-      xStart = (e.pageX - offset.left);
-      yStart = (e.pageY - offset.top);
-      renderLine(e, offset);
-    }).mouseup(function(e) {
-      offset = $(this).offset();
-      endLine(e, xStart, yStart, offset);
-    })
-  } else if (isCircleSelected === true) {
-    $('#artboard').click(function(e) {
-      offset = $(this).offset();
-      renderCircle(e, offset);
-    })
-  } else if (isRectSelected === true) {
-    var xStart, yStart, w, h, offset;
-    $('#artboard').mousedown(function(e) {
-      offset = $(this).offset();
-      xStart = (e.pageX - offset.left);
-      yStart = (e.pageY - offset.top);
-      renderRect(e, offset);
-    }).mouseup(function(e) {
-      offset = $(this).offset();
-      endRect(e, xStart, yStart, w, h, offset);
-    })
-  }
-}
 
 //selection functions for colors and removing drawings
 var shapeColor = "black";
@@ -87,8 +72,4 @@ function selectColor(i) {
 function clearCanvas() {
   stage.removeAllChildren();
   stage.update();
-}
-
-function removeLast() {
-
 }

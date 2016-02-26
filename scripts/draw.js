@@ -3,8 +3,15 @@ var stage = new createjs.Stage('artboard');
 var circle;
 var line;
 var rect;
+var triangle;
 
-//Circle Functions*****************
+//initiates the draw logic***********
+$('.shapeSelector').click(function() {
+  draw();
+})
+//***********************************
+
+//Circle Functions*******************
 function drawCircle(x, y) {
   circle.graphics.beginFill(shapeColor).drawCircle(x, y, 50);
   stage.update();
@@ -16,9 +23,9 @@ function renderCircle(e, offset) {
   drawCircle(x, y);
   console.log("Circle being drawn");
 }
-//*********************************
+//***********************************
 
-//Line functions*******************
+//Line functions*********************
 function drawLine(x, y, x2, y2) {
   line.graphics.beginStroke(shapeColor);
   line.graphics.moveTo(x, y);
@@ -58,3 +65,49 @@ function endRect(e, xStart, yStart, w, h, offset) {
   console.log('rect being drawn');
 }
 //***********************************
+
+//Triangle functions*****************
+function drawTriangle() {
+  triangle.graphics.beginFill(shapeColor)
+  triangle.graphics.moveTo().lineTo().lineTo().lineTo();
+  stage.update();
+}
+
+function renderTriangle() {
+
+}
+//***********************************
+
+//draw the selected shape********************
+function draw() {
+  if (isLineSelected === true) {
+    var xStart, yStart, offset;
+    $('#artboard').mousedown(function(e) {
+      console.log('dewing');
+      offset = $(this).offset();
+      xStart = (e.pageX - offset.left);
+      yStart = (e.pageY - offset.top);
+      renderLine(e, offset);
+    }).mouseup(function(e) {
+      offset = $(this).offset();
+      endLine(e, xStart, yStart, offset);
+    })
+  } else if (isCircleSelected === true) {
+    $('#artboard').click(function(e) {
+      offset = $(this).offset();
+      renderCircle(e, offset);
+    })
+  } else if (isRectSelected === true) {
+    var xStart, yStart, w, h, offset;
+    $('#artboard').mousedown(function(e) {
+      offset = $(this).offset();
+      xStart = (e.pageX - offset.left);
+      yStart = (e.pageY - offset.top);
+      renderRect(e, offset);
+    }).mouseup(function(e) {
+      offset = $(this).offset();
+      endRect(e, xStart, yStart, w, h, offset);
+    })
+  }
+}
+//*******************************************
