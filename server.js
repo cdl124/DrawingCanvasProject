@@ -28,7 +28,7 @@ s3.upload({
 })
 */
 
-var url = s3.getSignedUrl('getObject', {Bucket: 'shapesnstuff', Key: 'Artwork/colorImg.png', Expires: 953957380000});
+var url = s3.getSignedUrl('getObject', {Bucket: 'shapesnstuff', Key: 'Artwork/colorImg4.png', Expires: 953957380000});
 console.log(url);
 
 
@@ -49,14 +49,17 @@ app.post('/imgUpload', bodyParser.text({extended: false,type: 'urlencoded'}), fu
   })
 })
 
-// s3.listObjects({Bucket: 'shapesnstuff', Prefix: 'Artwork/'}, function(err, data) {
-//     if (err) {
-//       console.log(err);
-//       console.log(data);
-//     } else {
-//       console.log(data);
-//     }
-// });
+app.get('/art', function(req, res) {
+  s3.listObjects({Bucket: 'shapesnstuff', Prefix: 'Artwork/'}, function(err, data) {
+      if (err) {
+        console.log(err);
+        console.log(data);
+      } else {
+        console.log(data);
+        res.send(data);
+      }
+  });
+});
 
 // request.send();
 
