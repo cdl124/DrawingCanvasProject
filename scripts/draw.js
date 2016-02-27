@@ -2,7 +2,7 @@
 //as sets up our variables to beused across functions
 var stage = new createjs.Stage('artboard');
 var message = new createjs.Text("Select a shape!", '36px Arial', '#777777');
-  message.x = 125;
+  message.x = 250;
   message.y = 200;
   stage.addChild(message);
   stage.update();
