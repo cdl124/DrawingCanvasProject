@@ -13,27 +13,10 @@ var bodyParser = require('body-parser');
 // Set your region for future requests.
 AWS.config.region = 'us-west-2';
 
-/*
-s3.upload({
-  ACL: 'public-read',
-  Bucket: 'shapesnstuff',
-  Key: 'Artwork/colorImg2.png',
-  Body: colorImg
-}, function(err, data) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('Image put!');
-  }
-})
-*/
-
-var url = s3.getSignedUrl('getObject', {Bucket: 'shapesnstuff', Key: 'Artwork/colorImg4.png', Expires: 953957380000});
-console.log(url);
-
 
 app.post('/imgUpload', bodyParser.text({extended: false,type: 'urlencoded'}), function(req, res) {
   console.log(req.body);
+
   s3.upload({
     ACL: 'public-read',
     Bucket: 'shapesnstuff',

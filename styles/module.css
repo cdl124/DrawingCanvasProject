@@ -3,8 +3,10 @@
     font-size: 12vw;
   }
 
-  #toolbar img, #colorSelctor * {
+  #toolSelector *, #colorSelector * {
     display: inline;
+    width: 3em;
+    height: 3em;
   }
 
   #toolbar {
@@ -17,33 +19,40 @@
 }
 /* end media query */
 
-#toolbar, #colorSelector {
+#toolSelector, #colorSelector {
+  width: 100%;
+  text-align: center;
+}
+
+#toolSelector {
+  margin-right: 0.5em;
+}
+
+#functionButton {
   display: inline;
+  padding-left: 3em;
+}
+
+#toolbar {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
 #toolbar img {
-  width: 2em;
-  height: 2em;
+  width: 4em;
+  height: 4em;
 }
 
-#toolbar button {
-  border: none;
-  background-color: transparent;
-}
-
-#toolbar button, #toolbar img {
+#toolbar img {
   display: inline;
 }
 
 #artboard {
     border: 2px solid #555;
     height: 500px;
-    width: 500px;
+    width: 740px;
     max-width: 100%;
     margin: auto;
-    margin-top: 1em;
+    margin-top: 0.5em;
     position: relative;
     display: block;
     background-color: #fff;

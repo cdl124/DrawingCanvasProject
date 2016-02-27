@@ -16,7 +16,7 @@ $(document).ready(function() {
   // directory here.
 
   (function() {
-    var pageContent = $('.pagecontent');
+    var pageContent = $('#pagecontent');
     $.ajax({
       'type': 'GET',
       'url': '/art',

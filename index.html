@@ -15,12 +15,12 @@
   <nav>
     <ul>
       <li>
-        <a href='#'>
+        <a href='index.html'>
           <img src="styles/assets/Draw_Draw.png">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='gallery.html'>
           <img src="styles/assets/Gallery_Gallery.png">
         </a>
       </li>
@@ -29,22 +29,30 @@
   <main>
     <div class='container'>
       <div class='backbody'>
-        <div class='pagecontent'>
-          <a href='#' class="shapeSelector" onclick="circleSelect()">
-            <img src="styles/assets/Circle_Circle.png">
-          </a>
-          <a href='#' class="shapeSelector" onclick="lineSelect()">
-            <img src="styles/assets/Line_Line.png">
-          </a>
-          <a href="#" class="shapeSelector" onclick="freeSelect()">
-            <img src="styles/assets/FreeDraw_Draw.png">
-          </a>
-          <a href='#' class="shapeSelector" onclick="rectSelect()">
-            <img src="styles/assets/Rectangle_Rectangle.png">
-          </a>
-          <a href="#" class="shapeSelector" onclick="clearCanvas()">
-            <img src="styles/assets/Clear_Clear.png">
-          </a>
+        <div id='toolbar'>
+          <div id="toolSelector">
+            <a href='#' class="shapeSelector" onclick="circleSelect()">
+              <img src="styles/assets/Circle_Circle.png">
+            </a>
+            <a href='#' class="shapeSelector" onclick="lineSelect()">
+              <img src="styles/assets/Line_Line.png">
+            </a>
+            <a href="#" class="shapeSelector" onclick="freeSelect()">
+              <img src="styles/assets/FreeDraw_Draw.png">
+            </a>
+            <a href='#' class="shapeSelector" onclick="rectSelect()">
+              <img src="styles/assets/Rectangle_Rectangle.png">
+            </a>
+
+            <div id="functionButton">
+              <a href="#" class="button" onclick="clearCanvas()">
+                <img src="styles/assets/Clear_Clear.png">
+              </a>
+              <a href="#" id="galleryPost" class="button">
+                <img src="styles/assets/Save_Save.png" />
+              </a>
+            </div>
+          </div>
           <div id="colorSelector">
             <a href="#" class="button" onclick="selectColor(0)">
               <img src="styles/assets/colors/Red_Red.png">
@@ -54,7 +62,7 @@
             </a>
             <a href="#" class="button" onclick="selectColor(2)">
               <img src="styles/assets/colors/Yellow_Yellow.png">
-            </>
+            </a>
             <a href="#" class="button" onclick="selectColor(3)">
               <img src="styles/assets/colors/Green_Green.png">
             </a>
@@ -71,7 +79,7 @@
               <img src="styles/assets/colors/White_White.png">
             </a>
           </div>
-          <canvas id="artboard" width="500" height="500"></canvas>
+          <canvas id="artboard" width="740" height="500"></canvas>
         </div>
       </div>
     </div>
@@ -87,4 +95,5 @@
 <script src="scripts/select.js"></script>
 <script src="scripts/draw.js"></script>
 <script src="scripts/animate.js"></script>
+<script src="scripts/gallery.js"></script>
 </html>
