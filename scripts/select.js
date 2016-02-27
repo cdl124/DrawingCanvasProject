@@ -2,12 +2,13 @@
 var isCircleSelected;
 var isLineSelected;
 var isRectSelected;
-var isTriSelected;
+var isFreeSelected;
 
 function circleSelect() {
   $('#artboard').unbind('mouseup');
   $('#artboard').unbind('mousedown');
   $('#artboard').unbind('click');
+  stage.removeEventListener("stagemousedown", freeMouseDown);
 
   circle = new createjs.Shape();
   stage.addChild(circle);
@@ -22,6 +23,7 @@ function lineSelect() {
   $('#artboard').unbind('mouseup');
   $('#artboard').unbind('mousedown');
   $('#artboard').unbind('click');
+  stage.removeEventListener("stagemousedown", freeMouseDown);
 
   line = new createjs.Shape();
   stage.addChild(line);
@@ -32,10 +34,26 @@ function lineSelect() {
   isTriSelected = false;
 }
 
+function freeSelect() {
+  $('#artboard').unbind('mouseup');
+  $('#artboard').unbind('mousedown');
+  $('#artboard').unbind('click');
+  stage.removeEventListener("stagemousedown", freeMouseDown);
+
+  freeLine = new createjs.Shape();
+  stage.addChild(freeLine);
+
+  isCircleSelected = false;
+  isLineSelected = false;
+  isRectSelected = false;
+  isFreeSelected = true;
+}
+
 function rectSelect() {
   $('#artboard').unbind('mouseup');
   $('#artboard').unbind('mousedown');
   $('#artboard').unbind('click');
+  stage.removeEventListener("stagemousedown", freeMouseDown);
 
   rect = new createjs.Shape();
   stage.addChild(rect);
@@ -44,20 +62,6 @@ function rectSelect() {
   isLineSelected = false;
   isRectSelected = true;
   isTriSelected = false;
-}
-
-function TriSelect() {
-  $('#artboard').unbind('mouseup');
-  $('#artboard').unbind('mousedown');
-  $('#artboard').unbind('click');
-
-  triangle = new createjs.shape();
-  stage.addChild(triangle);
-
-  isCircleSelected = false;
-  isLineSelected = false;
-  isRectSelected = false;
-  isTriSelected = true;
 }
 //*******************************************
 
