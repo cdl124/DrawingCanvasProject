@@ -1,4 +1,5 @@
-//creates our canvas where shapes can be made
+//creates our canvas where shapes can be made as well
+//as sets up our variables to beused across functions
 var stage = new createjs.Stage('artboard');
 var message = new createjs.Text("Select a shape!", '36px Arial', '#777777');
   message.x = 125;

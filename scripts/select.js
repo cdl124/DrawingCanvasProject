@@ -4,12 +4,15 @@ var isLineSelected;
 var isRectSelected;
 var isFreeSelected;
 
-function circleSelect() {
+function eventClear() {
   $('#artboard').unbind('mouseup');
   $('#artboard').unbind('mousedown');
   $('#artboard').unbind('click');
   stage.removeEventListener("stagemousedown", freeMouseDown);
+}
 
+function circleSelect() {
+  eventClear();
   circle = new createjs.Shape();
   stage.addChild(circle);
 
@@ -20,11 +23,7 @@ function circleSelect() {
 }
 
 function lineSelect() {
-  $('#artboard').unbind('mouseup');
-  $('#artboard').unbind('mousedown');
-  $('#artboard').unbind('click');
-  stage.removeEventListener("stagemousedown", freeMouseDown);
-
+  eventClear();
   line = new createjs.Shape();
   stage.addChild(line);
 
@@ -35,11 +34,7 @@ function lineSelect() {
 }
 
 function freeSelect() {
-  $('#artboard').unbind('mouseup');
-  $('#artboard').unbind('mousedown');
-  $('#artboard').unbind('click');
-  stage.removeEventListener("stagemousedown", freeMouseDown);
-
+  eventClear();
   freeLine = new createjs.Shape();
   stage.addChild(freeLine);
 
@@ -50,11 +45,7 @@ function freeSelect() {
 }
 
 function rectSelect() {
-  $('#artboard').unbind('mouseup');
-  $('#artboard').unbind('mousedown');
-  $('#artboard').unbind('click');
-  stage.removeEventListener("stagemousedown", freeMouseDown);
-
+  eventClear();
   rect = new createjs.Shape();
   stage.addChild(rect);
 
