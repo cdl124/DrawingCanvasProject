@@ -20,7 +20,7 @@
         </a>
       </li>
       <li>
-        <a class="galleryView" href='gallery.html'>
+        <a href='#'>
           <img src="styles/assets/Gallery_Gallery.png">
         </a>
       </li>
@@ -29,44 +29,47 @@
   <main>
     <div class='container'>
       <div class='backbody'>
-        <div id="toolbar">
+        <div class='pagecontent'>
           <a href='#' class="shapeSelector" onclick="circleSelect()">
             <img src="styles/assets/Circle_Circle.png">
           </a>
           <a href='#' class="shapeSelector" onclick="lineSelect()">
             <img src="styles/assets/Line_Line.png">
           </a>
+          <a href="#" class="shapeSelector" onclick="freeSelect()">
+            <img src="styles/assets/FreeDraw_Draw.png">
+          </a>
           <a href='#' class="shapeSelector" onclick="rectSelect()">
             <img src="styles/assets/Rectangle_Rectangle.png">
           </a>
-          <button type="button" id="galleryPost">Save Art to the Gallery!</button>
-        <!-- </a href="#" class="shapeSelector" onclick=""></a> -->
-          <button type="button" id='clear' onclick="clearCanvas()">Clear the Canvas</button>
+          <a href="#" class="shapeSelector" onclick="clearCanvas()">
+            <img src="styles/assets/Clear_Clear.png">
+          </a>
           <div id="colorSelector">
-            <button type="button" onclick="selectColor(0)">
-              <img src="styles/assets/colors/Red.png">
-            </button>
-            <button type="button" onclick="selectColor(1)">
-              <img src="styles/assets/colors/Orange.png">
-            </button>
-            <button type="button" onclick="selectColor(2)">
-              <img src="styles/assets/colors/Yellow.png">
-            </button>
-            <button type="button" onclick="selectColor(3)">
-              <img src="styles/assets/colors/Green.png">
-            </button>
-            <button type="button" onclick="selectColor(4)">
-              <img src="styles/assets/colors/Blue.png">
-            </button>
-            <button type="button" onclick="selectColor(5)">
-              <img src="styles/assets/colors/Indigo.png">
-            </button>
-            <button type="button" onclick="selectColor(6)">
-              <img src="styles/assets/colors/Violet.png">
-            </button>
-            <button type="button" onclick="selectColor(7)">
-              <img src="styles/assets/colors/White.png">
-            </button>
+            <a href="#" class="button" onclick="selectColor(0)">
+              <img src="styles/assets/colors/Red_Red.png">
+            </a>
+            <a href="#" class="button" onclick="selectColor(1)">
+              <img src="styles/assets/colors/Orange_Orange.png">
+            </a>
+            <a href="#" class="button" onclick="selectColor(2)">
+              <img src="styles/assets/colors/Yellow_Yellow.png">
+            </>
+            <a href="#" class="button" onclick="selectColor(3)">
+              <img src="styles/assets/colors/Green_Green.png">
+            </a>
+            <a href="#" class="button" onclick="selectColor(4)">
+              <img src="styles/assets/colors/Blue_Blue.png">
+            </a>
+            <a href="#" class="button" onclick="selectColor(5)">
+              <img src="styles/assets/colors/Indigo_Indigo.png">
+            </a>
+            <a hre="#" class="button" onclick="selectColor(6)">
+              <img src="styles/assets/colors/Violet_Violet.png">
+            </a>
+            <a href="#" class="button" onclick="selectColor(7)">
+              <img src="styles/assets/colors/White_White.png">
+            </a>
           </div>
           <canvas id="artboard" width="500" height="500"></canvas>
         </div>
@@ -84,5 +87,4 @@
 <script src="scripts/select.js"></script>
 <script src="scripts/draw.js"></script>
 <script src="scripts/animate.js"></script>
-<script src="scripts/gallery.js"></script>
 </html>

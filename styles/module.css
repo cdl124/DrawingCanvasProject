@@ -22,6 +22,7 @@
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 #toolbar img {
   width: 2em;
   height: 2em;
@@ -90,3 +91,16 @@ Purple: #4B0082
 Pink: #EE82EE;
 White: #FFFFFF;
 */
+=======
+a.button img, a.shapeSelector  img {
+  -webkit-transition: all .01s ease;
+     -moz-transition: all .01s ease;
+       -o-transition: all .01s ease;
+      -ms-transition: all .01s ease;
+          transition: all .01s ease;
+}
+
+a.button img:active, a.shapeSelector img:active {
+  -webkit-filter: blur(5px);
+}
+>>>>>>> 753ab8e68c00511830ee3a7242fedc9f2d0335db
