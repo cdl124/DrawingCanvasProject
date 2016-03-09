@@ -22,7 +22,12 @@ $(document).ready(function() {
       'url': '/art',
       'success': function(data) {
         for (var i = 0; i < data.Contents.length; i++) {
-          document.getElementById('pagecontent').innerHTML = '<img src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" />';
+          var key = data.Contents[i].Key;
+
+          //Check to make sure it is a piece of art and not the containing folder
+          if(key != "Artwork/") {
+            pageContent.prepend('<img src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" />');
+          }
         }
       }
     });

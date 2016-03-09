@@ -7,11 +7,6 @@ img {
   height: 5em;
 }
 
-#pagecontent img {
-  height: 100%;
-  width: 100%;
-}
-
 div {
   height: 100%; }
 
@@ -33,6 +28,13 @@ a {
 nav {
   margin: auto; }
 
+nav ul li p {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -1em;
+}
+
 p, li, footer {
   font-family: 'Open Sans', sans-serif;
 }
@@ -42,5 +44,10 @@ p, li, footer {
   max-width: 100%; }
 
 .pagecontent {
-  width: 840px;
+  height: inherit;
+  width: 890px;
   max-width: 100%; }
+
+.container * {
+  text-align: center;
+}

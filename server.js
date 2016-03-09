@@ -1,14 +1,16 @@
 var AWS = require('aws-sdk'); // Amazon Web Services storage
-
+AWS.config.awsKeys = require('./awskey.js');
 var express = require('express');
 var port = process.env.PORT || 3000;
 var app = express();
 var s3 = new AWS.S3();
 var fs = require('fs');
 
-var colorImg = fs.readFileSync('./img/colors.png');
+// var colorImg = fs.readFileSync('./img/colors.png');
 var bodyParser = require('body-parser');
 
+// Array to push saved artworks into for display in the gallery.
+var artworkArray = [];
 
 // Set your region for future requests.
 AWS.config.region = 'us-west-2';
@@ -20,13 +22,14 @@ app.post('/imgUpload', bodyParser.text({extended: false,type: 'urlencoded'}), fu
   s3.upload({
     ACL: 'public-read',
     Bucket: 'shapesnstuff',
-    Key: 'Artwork/colorImg4.png',
+    Key: 'Artwork/image' + artworkArray.length + '.png',
     Body: new Buffer(req.body.replace(/^data:image\/(png|jpg);base64,/, ''), 'base64')
   }, function(err, data) {
     if (err) {
       console.log(err);
       console.log('Error uploading data: ' + data);
     } else {
+      artworkArray.push(s3.Key);
       console.log('New image put!');
     }
   })
