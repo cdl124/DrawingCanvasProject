@@ -7,9 +7,13 @@ img {
   height: 5em;
 }
 
-#pagecontent img {
-  height: 100%;
-  width: 100%;
+/* Images in the gallery */
+
+#pagecontent .galleryart {
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+  margin: 0.5em;
 }
 
 div {

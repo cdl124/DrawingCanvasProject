@@ -58,11 +58,7 @@
     background-color: #fff;
 }
 
-/*#galleryPost {
-  float: right;
-  height: 2em;
-  margin-top: -10em;
-}*/
+/* Code for the splash page, which is coming soon... */
 
 #splashscreen {
   position: absolute;
@@ -112,4 +108,3 @@ a.button img, a.shapeSelector  img {
 a.button img:active, a.shapeSelector img:active {
   -webkit-filter: blur(5px);
 }
->>>>>>> 753ab8e68c00511830ee3a7242fedc9f2d0335db

@@ -8,7 +8,7 @@ $(document).ready(function() {
     var canvas = document.getElementById("artboard");
     var dataUrl = canvas.toDataURL("image/png");
     $.post('/imgUpload', dataUrl, function(data, status, XHR) {
-      console.log(data);
+      console.log('Posted to the bucket: ', data);
     })
   });
 
@@ -21,11 +21,12 @@ $(document).ready(function() {
       'type': 'GET',
       'url': '/art',
       'success': function(data) {
-        for (var i = 0; i < data.Contents.length; i++) {
-          document.getElementById('pagecontent').innerHTML = '<img src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" />';
+        for (var i = 1; i < data.Contents.length; i++) {
+          $('div#pagecontent').append('<img class="galleryart" src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" /></div>');
+          console.log('we brought up ' + data.Contents[i].Key);
         }
       }
     });
   })();
 
-})
+});
