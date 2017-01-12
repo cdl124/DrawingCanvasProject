@@ -25,7 +25,7 @@ app.post('/imgUpload', bodyParser.text({extended: false,type: 'urlencoded'}), fu
   });
 });
 
-app.get('/art', function(req, res) {
+app.get('/gallery', function(req, res) {
   s3.listObjects({Bucket: 'shapesnstuff', Prefix: 'Artwork/'}, function(err, data) {
     if (err) {
       throw new Error('Error obtaining images: ', err);
