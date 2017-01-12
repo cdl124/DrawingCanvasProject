@@ -12,8 +12,7 @@ $(document).ready(function() {
     })
   });
 
-  // Gallery .pagecontent displays all images in the 'shapesnstuff' Artwork
-  // directory here.
+  // Gallery .pagecontent displays all images in the 'shapesnstuff' Artwork directory here.
 
   (function() {
     var pageContent = $('#pagecontent');
@@ -23,7 +22,6 @@ $(document).ready(function() {
       'success': function(data) {
         for (var i = 1; i < data.Contents.length; i++) {
           $('div#pagecontent').append('<img class="galleryart" src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" /></div>');
-          console.log('we brought up ' + data.Contents[i].Key);
         }
       }
     });
