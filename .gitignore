@@ -66,5 +66,6 @@ jspm_packages
 .yarn-integrity
 
 env.sh
+Procfile
 
 # End of https://www.gitignore.io/api/linux,node
