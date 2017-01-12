@@ -4,18 +4,19 @@
   "description": "drawing canvas group project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JacobKnaack/DrawingCanvasProject.git"
+    "url": "git+https://github.com/cdl124/DrawingCanvasProject.git"
   },
   "author": "cortney",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JacobKnaack/DrawingCanvasProject/issues"
+    "url": "https://github.com/cdl124/DrawingCanvasProject/issues"
   },
-  "homepage": "https://github.com/JacobKnaack/DrawingCanvasProject#readme",
+  "homepage": "https://github.com/cdl124/DrawingCanvasProject#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
