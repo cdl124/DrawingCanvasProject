@@ -23,6 +23,9 @@ $(document).ready(function() {
         for (var i = 1; i < data.Contents.length; i++) {
           $('div#pagecontent').append('<img class="galleryart" src="http://shapesnstuff.s3.amazonaws.com/' + data.Contents[i].Key + '" /></div>');
         }
+      },
+      'error': function(err) {
+        console.log('Error putting images to gallery: ', err);
       }
     });
   })();
